@@ -4,7 +4,7 @@
 #include<linux/module.h>
 static char *myname = "name";
 int init_module(void){
-	printk("Hello %s ! How are you?\n",myname);
+	printk("Your name from the parameter input is %s\n",myname);
 	return 0;
 }
 void cleanup_module(void){
