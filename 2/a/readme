@@ -1,1 +1,12 @@
+Question:
+(a) Write a module that can take an integer parameter when it is loaded with insmod command.
 
+Logic:
+
+1. Required header file is included  #include<linux/module.h>
+2. Declaring a global integer variable count
+3. Inside the init_module function the printk command is written printing the value of the count
+4. module_param(name,type,permission) is used to take an integer parameter when insmod is loaded.
+5. make is executed
+6. insmod intger_param.ko count=21  is given
+7. To watch the print from log -> dmesg|tail -1  is compiled.
