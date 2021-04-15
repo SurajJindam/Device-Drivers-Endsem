@@ -1,1 +1,12 @@
+Question:
+(b)Write a module which prints your name in log.
 
+Logic:
+
+1. Required header file is included  #include<linux/module.h>
+2. Declaring a global char* variable myname to store name
+3. Inside the init_module function the printk command is written printing the name
+4. module_param(name,type,permission) is used to take a string parameter when insmod is loaded.
+5. make is executed
+6. insmod name_param.ko myname="Suraj"  is given
+7. To watch the print from log -> dmesg|tail -1  is compiled.
